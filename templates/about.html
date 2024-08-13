@@ -1,0 +1,17 @@
+{% extends 'navbar.html' %}
+{% block content %}
+
+<div class="container-fluid" style="margin-top:10%;">
+    <div class="container bg-light">
+        {% for msg in messages %}
+        <h1 style="color:green;text-align:center;">{{ msg }}</h1>
+        {% endfor %}
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <a href="{% url 'logout' %}" rol="button" class="btn btn-info w-100">Logout</a>
+        </div>
+        <div class="col-md-4"></div>
+</div>
+{% endblock %}
